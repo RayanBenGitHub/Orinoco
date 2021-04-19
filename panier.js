@@ -148,3 +148,14 @@ if (cart.length < 1) {
         }
     });
 }
+// ex objet littéral
+const monObjet = {
+    monId1 : {
+        //monObjet1 (qtt , prix, etc..)
+    },
+    monId2 : {
+        // pareil
+    }
+};
+const monObjet1 = monObjet ["monId1"]
+//
