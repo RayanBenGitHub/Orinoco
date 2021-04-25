@@ -3,10 +3,10 @@ cartPreview();
 const orderForm = document.getElementById("orderForm");
 const emptycart = document.getElementById("emptycart");
 
-// indique que le panier est vide
+
 if (cart.length < 1) {
     orderForm.classList.add("d-none");
-    // sinon affiche le tableau avec les produits
+    
 } else {
     orderForm.classList.add("d-none");
     emptycart.classList.add("d-none");
@@ -16,7 +16,7 @@ if (cart.length < 1) {
         displayProductListTable(product);
     }
 
-    // ajouter produit
+    
     function addProduct(event) {
         const index = event.target.getAttribute("data-index");
         cart[index].quantity++;
@@ -29,7 +29,7 @@ if (cart.length < 1) {
         add.addEventListener("click", addProduct);
     }
 
-    //supprimer un produit
+    
     function minusProduct(event) {
         const index = event.target.getAttribute("data-index");
         if (cart[index].quantity > 1) {
@@ -46,10 +46,10 @@ if (cart.length < 1) {
         minus.addEventListener("click", minusProduct);
     }
 
-    //affiche le prix total
+    
     totalPrice();
 
-    //affiche le formulaire et cache les boutons valider/supprimer panier
+    
     const validationcart = document.getElementById("validationcart");
     const cacheButton = document.getElementById("cacheButton");
     validationcart.addEventListener("click", () => {
@@ -57,14 +57,14 @@ if (cart.length < 1) {
         cacheButton.classList.add("d-none");
     });
 
-    //vide le panier
+    
     const buttonClearcart = document.getElementById("clearcart");
     buttonClearcart.addEventListener("click", () => {
         clearcart();
         location.reload();
     });
 
-    //validation du formulaire et envoie en POST
+    
     const order = document.getElementById("order");
     const regexName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
     const regexCity = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
@@ -73,7 +73,7 @@ if (cart.length < 1) {
     const checkBox = document.getElementById("invalidCheck2");
 
     order.addEventListener("click", (event) => {
-        // on prépare les infos pour l'envoie en POST
+        
         let contact = {
             firstName: document.getElementById("firstName").value,
             lastName: document.getElementById("lastName").value,
@@ -81,7 +81,7 @@ if (cart.length < 1) {
             city: document.getElementById("city").value,
             email: document.getElementById("email").value,
         };
-        // on valide que le formulaire soit correctement rempli
+        
         if (
             (regexMail.test(contact.email) == true) &
             (regexName.test(contact.firstName) == true) &
@@ -92,7 +92,7 @@ if (cart.length < 1) {
         ) {
             event.preventDefault();
 
-            // on stocke l'heure et la date de la commande
+            
             const todayDate = new Date();
             let nowadays = todayDate.getDate();
             let month = todayDate.getMonth() + 1;
@@ -127,7 +127,7 @@ if (cart.length < 1) {
                 products.push(listId.id);
             }
 
-            // on envoie en POST
+            
             fetch("https://teddies-api.herokuapp.com/api/cameras/order", {
                 method: "POST",
                 headers: {
@@ -143,19 +143,8 @@ if (cart.length < 1) {
                 .catch((erreur) => console.log("erreur : " + erreur));
         } else {
             alert(
-                "Veuillez correctement renseigner l'entièreté du formulaire pour valider votre commande."
+                "Merci de renseigner tous les champs pour valider votre commande !"
             );
         }
     });
 }
-// ex objet littéral
-const monObjet = {
-    monId1 : {
-        //monObjet1 (qtt , prix, etc..)
-    },
-    monId2 : {
-        // pareil
-    }
-};
-const monObjet1 = monObjet ["monId1"]
-//

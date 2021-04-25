@@ -21,7 +21,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white ">
     <div class="container-fluid mx-2 mx-lg-5">
-        <img class="img-fluid mx-4 mx-lg-0 mr-auto w-25" src="../FrontEnd/img/15675819263013_image1.png" alt="logo orinoco" />
+        <img class="img-fluid mx-4 mx-lg-0 mr-auto" src="./logo.png" alt="logo orinoco" />
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse ms-4 " id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../FrontEnd/index.html">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="./panier.html" id="cartPreview">Panier</a>
@@ -49,9 +49,9 @@
 <section id="emptycart">
     <div class="container my-3 py-1">
         <div class="text-center my-5 shadow p-3 mb-5 bg-body rounded">
-            <h1 class="fs-1 font-weight-bold text-secondary my-5">Oups, votre panier semble vide, commencez vos achats
+            <h1 class="fs-1 font-weight-bold text-secondary my-5">Votre panier est vide ! Cliquez ici pour commencer vos achats 
             </h1>
-            <a role="button" class="btn btn-secondary text-uppercase my-3" href="../FrontEnd/index.html">C'est par
+            <a role="button" class="btn btn-secondary text-uppercase my-3" href="./index.html">C'est par
                 ici</a>
         </div>
     </div>`
@@ -99,7 +99,7 @@
 
 
 <div class="my-3 mx-5" id="orderForm">
-    <p class="my-5 fs-5">Merci de remplir ce formulaire pour passer votre commande, tous les champs sont obligatoires</p>
+    <p class="my-5 fs-5">Veuillez remplir ce formulaire afin de finaliser votre commande, tous les champs sont obligatoires</p>
     <form class="row g-3" id="orderFormValidity">
         <div class="col-md-4">
             <label for="validationDefault01" class="form-label">Prénom</label>
@@ -157,7 +157,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Voulez-vous vraiment supprimer le panier ?</p>
+                <p>Voulez-vous vraiment vider votre panier ?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" id="clearcart">Oui</button>
@@ -170,7 +170,7 @@
 
 <footer class="bg-light py-4">
     <ul class="list-inline text-center">
-        <li class="list-inline-item"><a href="../index.html" title="Accueil">Accueil</a></li>
+        <li class="list-inline-item"><a href="./index.html" title="Accueil">Accueil</a></li>
         <li class="list-inline-item"><a href="mailto:orinoco@mail.com?subject=Contact" title="Contact">Contact</a>
         </li>
         <li class="list-inline-item"><a href="#" title="Mentions Légales">Mentions Légales</a></li>
@@ -180,8 +180,8 @@
 
 <script src="https://kit.fontawesome.com/fd986726cd.js" crossorigin="anonymous"></script>
 
-<script src="./fonctions.js"></script>
-<script src="./panier.js"></script>
+<script src="./JavaScript/fonctions.js"></script>
+<script src="./JavaScript/panier.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
 </script>

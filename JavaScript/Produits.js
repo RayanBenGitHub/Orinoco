@@ -10,10 +10,10 @@ fetch(newUrl)
     .then((response) => response.json())
     .then((data) => {
         const product = data;
-        addCard(data);
+        addcart(data);
 
         
-        function addCard(product) {
+        function addcart(product) {
 
             
             const selectionProductImage = document.getElementById("productImage");
@@ -22,15 +22,15 @@ fetch(newUrl)
         `;
             const selectionProductName = document.getElementById("productName");
             selectionProductName.innerHTML += `
-        <h5 class="card-title">${product.name}</h5>
+        <h5 class="cart-title">${product.name}</h5>
         `;
             const selectionProductPrice = document.getElementById("productPrice");
             selectionProductPrice.innerHTML += `
-         <h5 class="card-title">${convertPrice(product.price)}</h5>
+         <h5 class="cart-title">${convertPrice(product.price)}</h5>
         `;
             const selectionProductDescription = document.getElementById("productDescription");
             selectionProductDescription.innerHTML += `
-        <p class="card-text">${product.description}</p>
+        <p class="cart-text">${product.description}</p>
         `;
             addLenses(product);
         }
