@@ -16,7 +16,8 @@ if (cart.length < 1) {
         displayProductListTable(product);
     }
 
-    
+    /* ajout et retrait de produits du panier */
+
     function addProduct(event) {
         const index = event.target.getAttribute("data-index");
         cart[index].quantity++;
@@ -46,7 +47,7 @@ if (cart.length < 1) {
         minus.addEventListener("click", minusProduct);
     }
 
-    
+    /* calcul prix total */
     totalPrice();
 
     
@@ -57,7 +58,7 @@ if (cart.length < 1) {
         cacheButton.classList.add("d-none");
     });
 
-    
+    /* effacer le panier */
     const buttonClearcart = document.getElementById("clearcart");
     buttonClearcart.addEventListener("click", () => {
         clearcart();
