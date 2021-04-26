@@ -25,7 +25,7 @@ function addcarts(data) {
                       </div>
                   </div>
                   <p class="cart-text text-truncate">${produit.description}</p>
-                  <a href="./produits.html?_id=${produit._id}" class="btn btn-secondary">Acheter ce produit</a>
+                  <a href="./produits.html?_id=${produit._id}" class="btn btn-success">Acheter ce produit</a>
               </div>
           </div>
       </div>`;
