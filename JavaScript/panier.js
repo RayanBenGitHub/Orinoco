@@ -139,7 +139,7 @@ if (cart.length < 1) {
                 .then((response) => response.json())
                 .then((data) => {
                     localStorage.setItem("order", JSON.stringify(data));
-                    document.location.href = "order.html";
+                    document.location.href = "selection.html";
                 })
                 .catch((erreur) => console.log("erreur : " + erreur));
         } else {
