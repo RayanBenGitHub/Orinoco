@@ -65,7 +65,7 @@
             <table class="table table-hover my-auto mx-0">
                 <thead>
                 <tr class="text-center fs-5">
-                    <th scole="col">Produit</th>
+                    <th scole="col text-center">Produit</th>
                     <th scole="col">Nom</th>
                     <th scole="col">Option</th>
                     <th scole="col">Quantité</th>
@@ -79,7 +79,7 @@
                 <tfoot>
                 <tr class="text-center fs-5 bg-light">
                     <th colspan="4" class="bg-white"></th>
-                    <th colspan="1">Total : </th>
+                    <th colspan="1">Total: </th>
                     <th colspan="1" id="totalPrice"></th>
                 </tr>
                 </tfoot>
@@ -103,31 +103,31 @@
     <form class="row g-3" id="orderFormValidity">
         <div class="col-md-4">
             <label for="validationDefault01" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Ex: 'ori'"
+            <input type="text" class="form-control" id="firstName" placeholder="Ex: 'Stan'"
                    pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
         </div>
         <div class="col-md-4">
             <label for="validationDefault02" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Ex: 'noco'"
+            <input type="text" class="form-control" id="lastName" placeholder="Ex: 'Smith'"
                    pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$" required>
         </div>
         <div class="col-md-4">
             <label for="validationDefaultUsername" class="form-label">Email</label>
             <div class="input-group has-validation">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
-                <input type="text" class="form-control" id="email" placeholder="Ex: 'orinoco@mail.fr'"
+                <input type="text" class="form-control" id="email" placeholder="Ex: 'mon-email@mail.fr'"
                        aria-describedby="inputGroupPrepend"
                        pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$" required>
             </div>
         </div>
         <div class="col-md-6">
             <label for="validationDefault03" class="form-label">Adresse</label>
-            <input type="text" class="form-control" id="address" placeholder="Ex: '3 rue orinoco'"
+            <input type="text" class="form-control" id="address" placeholder="Ex: '3 Rue du Four'"
                    pattern="^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$" required>
         </div>
         <div class="col-md-3">
             <label for="validationDefault04" class="form-label">Ville</label>
-            <input type="text" class="form-control" id="city" placeholder="Ex: 'orinococity'"
+            <input type="text" class="form-control" id="city" placeholder="Ex: 'Paris'"
                    pattern="^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$" required>
         </div>
         <div class="col-12">
